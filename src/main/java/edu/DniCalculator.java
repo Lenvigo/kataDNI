@@ -1,21 +1,26 @@
 package edu;
 
-public class DniCalculator {
-    private final DniValidator validator;
-    public DniCalculator(){
-         this.validator= new DniValidator();
-     }
-    public DniCalculator(DniValidator validator) {
-         this.validator = validator;
-    }
+//calculo de dni completo. Una vez validado el formato numerico, encuentra la letra corespondiente.
+public class DniCalculator implements DniCalculatorInterface {
 
-    public char calculateLetter(int dniNumber) {
-        if(!validator.isValidFormat(dniNumber)){
-           throw new IllegalArgumentException("Invalid DNI format: " + dniNumber);
+        private final DniValidator validator;
+        private final LetterTable letterTable;
+
+
+        public DniCalculator(DniValidator validator, LetterTable letterTable) {
+                this.validator = validator;
+                this.letterTable = letterTable;
         }
 
-        int remainder = dniNumber % 23;
-        char[] letters = "TRWAGMYFPDXBNJZSQVHLCKE".toCharArray();
-        return letters[remainder];
-    }
+
+        public Dni calculateDni(long dniNumber) {
+                if (!validator.isValidFormat(dniNumber)) {
+                        return null;
+                }
+
+                int remainder = (int) (dniNumber % 23);
+                char letter = letterTable.getLetter(remainder);
+                return new Dni(dniNumber, letter);
+        }
 }
+

@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-13T21:27:46 CET" name="Surefire suite" finished-at="2024-02-13T21:27:46 CET" duration-ms="63">
+  <suite started-at="2024-02-14T19:34:04 CET" name="Surefire suite" finished-at="2024-02-14T19:34:04 CET" duration-ms="16">
     <groups>
     </groups>
-    <test started-at="2024-02-13T21:27:46 CET" name="Surefire test" finished-at="2024-02-13T21:27:46 CET" duration-ms="63">
-      <class name="edu.TestDniCalculator">
-        <test-method signature="testCalculateLetter()[pri:0, instance:edu.TestDniCalculator@43015c69]" started-at="2024-02-13T21:27:46 CET" name="testCalculateLetter" finished-at="2024-02-13T21:27:46 CET" duration-ms="9" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCalculateLetter -->
-        <test-method signature="testInvalidDniFormat()[pri:0, instance:edu.TestDniCalculator@43015c69]" started-at="2024-02-13T21:27:46 CET" name="testInvalidDniFormat" finished-at="2024-02-13T21:27:46 CET" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInvalidDniFormat -->
-      </class> <!-- edu.TestDniCalculator -->
+    <test started-at="2024-02-14T19:34:04 CET" name="Surefire test" finished-at="2024-02-14T19:34:04 CET" duration-ms="16">
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>

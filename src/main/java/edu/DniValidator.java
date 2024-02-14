@@ -1,11 +1,13 @@
 package edu;
+//validador de formato numerico del dni.
 
-public class DniValidator {
+    public class DniValidator implements DniValidatorInterface {
 
-    public boolean isValidFormat(int dniNumber) {
-        String dniString = String.valueOf(dniNumber);
+        private static final String DNI_REGEX = "^\\d+$";
         // {\\d+}digito entre 0-9 que se pueden repetir
-        return dniString.length() == 8 && dniString.matches("\\d+");
+        @Override
+        public boolean isValidFormat(long dniNumber) {
+            return dniNumber >= 0 && String.valueOf(dniNumber).matches(DNI_REGEX);
+        }
     }
 
-}

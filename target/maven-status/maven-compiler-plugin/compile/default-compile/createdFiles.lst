@@ -1,2 +1,6 @@
-edu\DniCalculator.class
+edu\Dni.class
 edu\DniValidator.class
+edu\DniCalculatorInterface.class
+edu\DniCalculator.class
+edu\LetterTable.class
+edu\DniValidatorInterface.class
