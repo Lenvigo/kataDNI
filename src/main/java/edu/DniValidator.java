@@ -3,7 +3,7 @@ package edu;
 
     public class DniValidator implements DniValidatorInterface {
 
-        private static final String DNI_REGEX = "^\\d+$";
+        private static final String DNI_REGEX = "^\\d{8}$";
         // {\\d+}digito entre 0-9 que se pueden repetir
         @Override
         public boolean isValidFormat(long dniNumber) {
