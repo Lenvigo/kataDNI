@@ -9,8 +9,8 @@ public class TestLetterTable {
 
     @Test
     public void testGetLetter() {
-        assertEquals('Z', letterTable.getLetter(0));
-        assertEquals('M', letterTable.getLetter(12));
+        assertEquals('T', letterTable.getLetter(0));
+        assertEquals('N', letterTable.getLetter(12));
         assertEquals('E', letterTable.getLetter(22));
     }
 

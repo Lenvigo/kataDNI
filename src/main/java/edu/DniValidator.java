@@ -3,11 +3,16 @@ package edu;
 
     public class DniValidator implements DniValidatorInterface {
 
-        private static final String DNI_REGEX = "^\\d{8}$";
+        private static final String DNI_REGEX = "^(\\d{8})$";
         // {\\d+}digito entre 0-9 que se pueden repetir
         @Override
-        public boolean isValidFormat(long dniNumber) {
-            return dniNumber >= 0 && String.valueOf(dniNumber).matches(DNI_REGEX);
-        }
-    }
+        public boolean isValidFormat(long dniNumber) throws IllegalArgumentException {
+
+            if (dniNumber< 0 || !String.valueOf(dniNumber).matches(DNI_REGEX)) {
+                throw new IllegalArgumentException("Invalid DNI number: " + dniNumber);
+            }
+            return true;
+        }}
+
+
 

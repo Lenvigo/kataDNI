@@ -1,5 +1,5 @@
 package edu;
-
+import edu.Dni;
 //calculo de dni completo. Una vez validado el formato numerico, encuentra la letra corespondiente.
 public class DniCalculator implements DniCalculatorInterface {
 
@@ -13,10 +13,8 @@ public class DniCalculator implements DniCalculatorInterface {
         }
 
 
-        public Dni calculateDni(long dniNumber) {
-                if (!validator.isValidFormat(dniNumber)) {
-                        return null;
-                }
+        public Dni calculateDni(long dniNumber) throws IllegalArgumentException {
+                validator.isValidFormat(dniNumber); // Validar el formato del DNI
 
                 int remainder = (int) (dniNumber % 23);
                 char letter = letterTable.getLetter(remainder);
